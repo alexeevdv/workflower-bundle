@@ -11,22 +11,22 @@
         }
     ],
     "require": {
-        "php": ">=5.3.9",
-        "phpmentors/workflower": "~1.2",
-        "symfony/config": "~2.8 || ~3.0 || ~4.0",
-        "symfony/dependency-injection": "~2.8 || ~3.0 || ~4.0",
-        "symfony/finder": "~2.8 || ~3.0 || ~4.0",
-        "symfony/http-kernel": "~2.8 || ~3.0 || ~4.0",
-        "symfony/security-core": "~2.8 || ~3.0 || ~4.0",
-        "symfony/security-bundle": "~2.8 || ~3.0 || ~4.0"
+        "phpmentors/workflower": "dev-feature/add-symfony-5-support",
+        "phpmentors/stagehand-fsm": "dev-feature/symfony-5-support as 3.0@dev",
+        "symfony/config": "^4.3|^5.0",
+        "symfony/dependency-injection": "^4.3|^5.0",
+        "symfony/finder": "^4.3|^5.0",
+        "symfony/http-kernel": "^4.3|^5.0",
+        "symfony/security-core": "^4.3|^5.0",
+        "symfony/security-bundle": "^4.3|^5.0"
     },
     "require-dev": {
         "doctrine/orm": "~2.4",
-        "symfony/doctrine-bridge": "~2.8 || ~3.0 || ~4.0"
+        "symfony/doctrine-bridge": "^4.3|^5.0"
     },
     "suggest": {
         "doctrine/orm": ">= 2.4.0 provides transparent serialization/deserialization support for entities with Doctrine ORM",
-        "symfony/doctrine-bridge": ">=2.8.0 provides transparent serialization/deserialization support for entities with Doctrine ORM"
+        "symfony/doctrine-bridge": ">=4.3 provides transparent serialization/deserialization support for entities with Doctrine ORM"
     },
     "autoload": {
         "psr-4": {
@@ -37,5 +37,15 @@
         "branch-alias": {
             "dev-master": "1.5.x-dev"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:alexeevdv/workflower.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:alexeevdv/stagehand-fsm.git"
+        }
+    ]
 }
